@@ -1,9 +1,13 @@
-<h1>Products</h1>
-<%= link_to "New product","/products/new" %>
+<div class="subtitle">Products</div>
+
+
+<%= link_to "NEW PRODUCT","/products/new", class: "button" %>
+
+
 
 <% @products.each do |product| %>
 	
-	<p><%= link_to product.name, "/products/#{product.id}" %>
-		 <%= product.description %>
-		 <%= product.formatted_price %></p>
+	<p><%= link_to product.name, "/products/#{product.id}", class: "p-title" %>
+		 <p class="p-desc"><%= product.description %></p>
+		 <p class="p-price"><%= product.formatted_price %></p>
 <% end %>

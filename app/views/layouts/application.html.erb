@@ -9,7 +9,9 @@
 <body>
 
 <div class="page-container">
+<div class="rf-title">
  <%= link_to 'Rainforest', products_path %>
+ </div>
     <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
@@ -25,6 +27,7 @@
     </p>
 
 <%= yield %>
+
 </div>
 </body>
 </html>
