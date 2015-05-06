@@ -9,12 +9,12 @@ User.create!({
   }
 )
 
-100.times do |i|
+100.times do 
 
 Product.create({
-  name: "Product#{i}",
-  description: "Description#{i}",
-  price_in_cents: i
+  name: Faker::Commerce.product_name,
+  description: Faker::Hacker.say_something_smart,
+  price_in_cents: rand(0..100)
   }
 )
 end
