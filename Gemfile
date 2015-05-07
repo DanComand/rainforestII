@@ -45,5 +45,7 @@ group :development, :test do
   gem 'kaminari'
 
   gem 'faker'
+
+  gem 'pry-rails'
 end
 

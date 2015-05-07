@@ -1,18 +1,18 @@
 <div class="subtitle">Products</div>
 
-<h1><small><%= page_entries_info @products %></small></h1>
+	<h1><small><%= page_entries_info @products %></small></h1>
 
-<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search" %>
-<% end %>
-<br>
-<%= link_to "NEW PRODUCT","/products/new", class: "button" %>
+		<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+			<%= text_field_tag :search, params[:search] %>
+			<%= submit_tag "Search" %>
+		<% end %>
+		<br>
+		<%= link_to "NEW PRODUCT","/products/new", class: "button" %>
 
 
-<div id="products">
-	<%= render @products %>
-</div>
+		<div id="products">
+			<%= render @products %>
+	</div>
 
 <%= paginate @products %>
 
