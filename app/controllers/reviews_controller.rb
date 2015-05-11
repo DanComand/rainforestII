@@ -9,6 +9,11 @@ class ReviewsController < ApplicationController
   def create
   	@product = Product.find(params[:product_id])
     @review = @product.reviews.build(review_params)
+
+    # This does the same work as line 11
+    # @review = Review.new(review_params)
+    # @review.product = @product
+
     @review.user = current_user
     respond_to do |format|
       
